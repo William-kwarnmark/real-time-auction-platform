@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="itemFileTitle">Produkt</title>
+  </head>
+  <body>
+    <header id="header">
+      <a id="backBtn" href="/">Tillbaka till startsidan</a>
+    </header>
+    <section id="itemContainer"></section>
+    <div id="bidHistory">
+      <h2>Budhistorik</h2>
+      <table id="bidHistoryTable">
+        <tr>
+          <th>Bud</th>
+          <th>Budgivare</th>
+          <th>Tidpunkt</th>
+        </tr>
+      </table>
+    </div>
+
+    <script type="module" src="/src/socket.ts"></script>
+  </body>
+</html>

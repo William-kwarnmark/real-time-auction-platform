@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efefef;
+  color: #111;
+}
+
+#header {
+  position: relative;
+  height: 50px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+#logo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#buttons {
+  display: flex;
+  gap: 12px;
+}
+
+#buttons button {
+background: #111;
+color: white;
+border: none;
+padding: 6px 12px;
+border-radius: 6px;
+cursor: pointer;
+}
+
+#app {
+  padding: 40px;
+}
+
+#auctionsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#auctionTitle {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#registerWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#registerForm {
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#registerSuccessMsg {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: yellow;
+}
+
+.hidden {
+  display: none;
+}
+
+.timerBox {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.winnerOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.winnerPopup {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.winnerPopup button {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.auctionCard {
+  width: 300px;
+  background-color: #d3d3d3;
+  padding: 20px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 120px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auctionCardDetails {
+  margin-top: 10px;
+}
+
+.auctionCardDetails h3 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.auctionCardDetails p {
+  font-size: 10px;
+  margin: 2px 0;
+}
+
+#userBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#createAuctionPage {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#createAuctionWrapper {
+  background-color: #d3d3d3;
+width: 420px;
+padding: 35px;
+}
+
+#auctionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#createAuctionTitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#auctionForm label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+#auctionForm input,
+#auctionForm textarea {
+  padding: 8px;
+  border: none;
+  margin-top: 4px;
+}
+
+#auctionForm textarea {
+  resize: none;
+  height: 60px;
+}
+
+#submitAuctionBtn {
+  align-self: flex-end;
+  margin-top: 10px;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.itemPageLayout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+}
+
+.itemLeftColumn {
+  width: 240px;
+}
+
+.itemRightColumn {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.itemImageContainer {
+  width: 100%;
+}
+
+.itemImageContainer img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background-color: #efefef;
+}
+
+.timerBox {
+  margin-top: 20px;
+  background-color: #d3d3d3;
+  padding: 12px 0;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.itemInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemInfoContainer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.itemInfoContainer h1 {
+  margin: 0 0 4px 0;
+  font-size: 30px;
+}
+
+.itemDescriptionContainer {
+  margin-top: 8px;
+}
+
+.itemDescriptionContainer h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+.itemDescriptionContainer p {
+  line-height: 1.5;
+}
+
+.bidSection {
+  background-color: #d3d3d3;
+  padding: 16px;
+}
+
+.bidForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bidForm label {
+  font-size: 14px;
+}
+
+.bidInput {
+  border: none;
+  padding: 10px;
+}
+
+#bidForm button {
+  align-self: flex-end;
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+
+#bidErrorMsg {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: tomato;
+}
+
+#bidHistory {
+  background-color: #d3d3d3;
+  padding: 16px;
+  margin: 0;
+}
+
+#bidHistory h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+#bidHistoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+#bidHistoryTable th,
+#bidHistoryTable td {
+  border: none;
+  padding: 6px 0;
+  font-size: 12px;
+  text-align: left;
+}
+
+#backBtn {
+background: #111;
+color: white;
+padding: 6px 12px;
+border-radius: 6px;
+text-decoration: none;
+display: inline-block;
+}

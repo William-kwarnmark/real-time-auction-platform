@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skapa konto</title>
+</head>
+<body>
+
+    <div id="registerWrap">
+        
+        <form id="registerForm">
+            <h2>Skapa konto</h2>
+
+            <label for="username">Användarnamn:</label>
+            <input type="text" id="username" >
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" >
+
+            <label for="password">Lösenord:</label>
+            <input type="password" id="password">
+
+            <p id="registerErrorMsg"></p>
+
+            <button>Skapa konto</button>
+
+            <p id="registerSuccessMsg"></p>
+        </form>
+
+
+    </div>
+    <script type="module" src="src/register.ts"></script>
+</body>
+</html>

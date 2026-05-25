@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skapa en ny auktion</title>
+  </head>
+  <body id="createAuctionPage">
+    <div id="createAuctionWrapper">
+    <h1 id="createAuctionTitle">Skapa auktion</h1>
+
+    <form id="auctionForm">
+      <label>
+        Rubrik
+        <input type="text" id="title" minlength="4" maxlength="50" />
+      </label>
+
+      <label>
+        Beskrivning
+        <textarea id="description" maxlength="1000"></textarea>
+      </label>
+
+      <label>
+        Bild-url
+        <input type="url" id="image" />
+      </label>
+
+      <label>
+        Utropspris
+        <input type="number" id="startingBid" min="1" />
+      </label>
+
+      <label>
+        Startdatum och tid
+        <input type="datetime-local" id="startDateTime" />
+      </label>
+
+      <button id="submitAuctionBtn" type="submit">Skapa auktion</button>
+    </form>
+</div>
+
+    <script type="module" src="/src/createAuction.ts"></script>
+  </body>
+</html>
